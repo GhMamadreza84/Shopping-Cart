@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Card </title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./assets/fontawesome/css/all-fonts.min.css" />
+  </head>
+  <body>
+
+    <!-- HEADER -->
+    <header class="header">
+      <a href="#" class="header-link">Products</a>
+
+      <!-- header buttons (search button & cart button) -->
+      <div class="header-btn-wrapper">
+        <input
+          type="text"
+          placeholder="search product by it's name"
+          id="search-input"
+          autocomplete="off"
+        />
+        <button type="button" id="header-cart-btn">
+          <i class="fa fa-shopping-bag"></i>
+          <span class="quantity-text">0</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- SHOPPING CART CONTAINER -->
+    <div class="container">
+      <section class="show-section" id="product-list-container">
+        <h2 class="condition-text">Loading...</h2>
+        <!-- products -->
+        <div id="product-list" >
+          <!-- Products will be dynamically generated here -->
+        </div>
+
+        <!-- category buttons -->
+        <div class="category-buttons-wrapper">
+          <h3 class="category-title">Categories</h3>
+          <div id="category-buttons">
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- shopping basket -->
+      <section class="cart-container">
+        <div id="cart">
+          <table id="cart-table"></table>
+        </div>
+
+        <!-- checkout box -->
+        <div class="checkout-box">
+          <p class="total-price">
+            Total Price: $<span id="cart-total">0.00</span>
+          </p>
+          <div class="checkout-btns">
+            <button type="button" class="checkout-btn" id="clear-all-btn">
+              Clear All
+            </button>
+            <button type="button" class="checkout-btn" id="checkout-btn">
+              Check Out
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
